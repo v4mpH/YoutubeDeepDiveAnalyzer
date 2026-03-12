@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+youtube-transcript-api
+google-generativeai
+duckduckgo-search
+gradio
+python-dotenv
+requests
+apify-client

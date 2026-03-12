@@ -1,0 +1,41 @@
+This application analyzes YouTube videos by transcribing them, identifying keywords and main topics, finding reference articles via DuckDuckGo and finalizing report using Gemini AI.
+
+## Prerequisites
+
+- Python 3.8+
+- A Google Gemini API Key
+
+## Setup
+
+1. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. **Configuration**:
+   - Open `.env`
+   - Add your `GEMINI_API_KEY`.
+   - Add your `APIFY_KEY` (optional)
+
+## Running the App
+
+You need to run both the Backend (FastAPI) and Frontend (Gradio).
+
+**Terminal 1 (Backend):**
+```bash
+uvicorn main:app --reload
+```
+The fastAPI environment will run at `http://127.0.0.1:8000`.
+
+**Terminal 2 (Frontend):**
+```bash
+python app.py
+```
+The UI will be available at `http://127.0.0.1:7860`.
+
+## Architecture
+
+- **Directives**: `video_analysis_workflow.md` (Process definition) and `Leggimi.txt` (Install and Launch)
+- **Execution**: (Python scripts for transcription, analysis, search, finalizing report)
+- **Backend**: FastAPI orchestrating the scripts.
+- **Frontend**: Gradio UI.
